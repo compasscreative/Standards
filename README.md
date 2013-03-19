@@ -21,5 +21,6 @@ The following guide started at [Compass Creative](http://compasscreative.ca/) as
 
 If anything in the above document does not make sense, or you're not sure exactly how to do it, please let us know. We're happy to help. Have a better way of doing something? Great! Let chat about it:
 
-**Twitter:** [@reinink](https://twitter.com/reinink)
-**Email:** [jonathan@compasscreative.ca](mailto:jonathan@compasscreative.ca)
+- **Twitter:** [@reinink](https://twitter.com/reinink)
+- **Email:** [jonathan@compasscreative.ca](mailto:jonathan@compasscreative.ca)
+- **Phone:** (905) 331-1850 x 10
