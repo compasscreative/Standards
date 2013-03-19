@@ -11,6 +11,12 @@ We follow the [PHP-FIG](http://www.php-fig.org/) (PHP Framework Interop Group) c
 
 ## Views
 
+### Introduction
+
+Our projects use the [Reveal](https://github.com/reinink/Reveal) library for views. Please see that project for full documentation. Reveal is not templating engine, rather is simply makes working with PHP based views easier. We've created the following rules for how our views should be programmed:
+
+### Rules
+
 - Always use the extension `.tpl` for views.
 - Always use `HTML` with inline `PHP`.
 - Never use blocks of `PHP`.
@@ -25,3 +31,40 @@ We follow the [PHP-FIG](http://www.php-fig.org/) (PHP Framework Interop Group) c
 - Always use the `if` and `foreach` control structures.
 - Never use the `for`, `while` or `switch` control structures.
 - Always avoid assigning variables.
+
+### Example
+
+```php
+<?
+$this->title = $e($this->gallery->title);
+$this->insert('partials/header');
+?>
+
+<h1><?=$e($this->gallery->title)?></h1>
+
+<ul>
+    <? foreach ($this->photos as $photo): ?>
+        <li>
+            <a href="<?=$e($photo->xlarge_url)?>" title="<?=$e($photo->caption)?>">
+                <img src="<?=$e($photo->small_url)?>" alt="<?=$e($photo->caption)?>" />
+            </a>
+        </li>
+    <? endforeach ?>
+</ul>
+
+<div class="description"><?=$this->gallery->description?></div>
+
+<h2>Other Galleries</h2>
+<ul>
+    <? foreach($this->other_galleries as $gallery): ?>
+        <li>
+            <a href="<?=$e($gallery->url)?>">
+                <img src="<?=$e($gallery->photo_url)?>" alt="<?=$e($gallery->photo_caption)?>">
+                <h3><?=$e($gallery->title)?></h3>
+            </a>
+        </li>
+    <? endforeach ?>
+</ul>
+
+<? $this->insert('partials/footer'); ?>
+```
