@@ -13,19 +13,19 @@ We follow the [PHP-FIG](http://www.php-fig.org/) (PHP Framework Interop Group) c
 
 ### Introduction
 
-Our projects use the [Reveal](https://github.com/reinink/Reveal) library for views. Please see that project for full documentation. Reveal is not templating engine, rather is simply makes working with PHP based views easier. We've created the following rules for how our views should be programmed:
+Our projects use the [Reveal](https://github.com/reinink/Reveal) library for views. Please see that project for full documentation. Reveal is not a templating engine, rather it simply makes working with PHP based views easier. We've created the following rules for how our views should be programmed:
 
 ### Rules
 
-- Always use the extension `.tpl` for views.
+- Always use the `.tpl` extension for views.
 - Always use `HTML` with inline `PHP`.
 - Never use blocks of `PHP`.
-- Always escape all variables prior to outputting. Use the built-in shortcut `$e()`.
+- Always escape all variables prior to outputting. Use the built-in shortcut `$e()` function.
 - Always use short tags `<?`, `<?=` and `?>`.
-- Never use the standard `<?php` tag.
+- Never use the full `<?php` tag.
 - Always use the [alternative syntax for control structures](http://php.net/manual/en/control-structures.alternative-syntax.php).
 - Never use PHP curley brackets.
-- Always have only one statement in a tag each.
+- Always have only one statement in a each tag.
 - Never use the `use` operator.
 - Never access the database layer.
 - Always use the `if` and `foreach` control structures.
